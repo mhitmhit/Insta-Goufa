@@ -1,11 +1,11 @@
 {
   "name": "insta-goufa",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/www"
+    "lite": "lite-server",
+    "start": "npm run lite"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +15,17 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.18",
     "morgan": "^1.10.0"
-  }
+  },
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhitmhit/Insta-Goufa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mhitmhit/Insta-Goufa/issues"
+  },
+  "homepage": "https://github.com/mhitmhit/Insta-Goufa#readme",
+  "description": "InstaGoufa Site"
 }
