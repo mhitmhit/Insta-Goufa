@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
+import Directory from './components/DirectoryComponent';
+import NavBar from './components/NavBar';
+import { CATEGORIES } from './shared/categories';
+
 import './App.css';
 
 class App extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            categories: CATEGORIES
+        }
+    }
+
     render() {
         return (
             <div className="App">
-                <Navbar dark color="primary">
-                <div className="container">
-                    <NavbarBrand href="/">NuCamp</NavbarBrand>
-                </div>
-                </Navbar>
+                <NavBar />
+                <Directory categories = {this.state.categories}/>
             </div>
         );
     }
