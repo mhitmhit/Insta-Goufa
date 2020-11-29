@@ -4,19 +4,21 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 're
 class Directory extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-        };
     }
 
     render(){
         const directory = this.props.categories.map(category => {
             return (
                 <div key={category.id} className="col-md-5 m-1">
-                    <Card >
+                    <Card>
                         <CardImg width="100%" src={category.image} alt={category.name} />
                         <CardImgOverlay>
                             <CardTitle>{category.name}</CardTitle>
                         </CardImgOverlay>
+                        <CardBody>
+                            <CardTitle>{category.name}</CardTitle>
+                            <CardText>{category.description}</CardText>
+                        </CardBody>
                     </Card>
                 </div>
             );

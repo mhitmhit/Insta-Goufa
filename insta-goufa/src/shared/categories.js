@@ -19,8 +19,14 @@ export const CATEGORIES = [
     },
     {
         id: 3,
+        name: 'Spices',
+        image: 'assets/images/spices.jpg',
+        description: "High quality spices cured and prepared by our expert team members"
+    },
+    {
+        id: 4,
         name: 'Merchants',
         image: 'assets/images/stores.jpg',
-        description: "High quality groceries picked by our experts to meet your needs"
+        description: "Our dedicated Merchants are here to serve our customers with the best products in the Market"
     }
 ];
