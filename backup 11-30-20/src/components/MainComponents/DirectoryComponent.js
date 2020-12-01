@@ -16,14 +16,6 @@ function RenderDriectoryItem({category}){
     )
 }
 
-function SectionSeperator(){
-    return (
-        <div>
-            
-        </div>
-    );
-}
-
 function Directory(props) {
     const directory = props.categories.map(category => {
         return (
