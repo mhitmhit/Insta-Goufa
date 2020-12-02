@@ -27,7 +27,7 @@ function SectionSeperator(){
 function Directory(props) {
     const directory = props.categories.map(category => {
         return (
-            <div key={category.id} className="col-md-4 m-0">
+            <div key={category.id} className="col-md-4">
                 <RenderDriectoryItem category={category} />
             </div>
         );

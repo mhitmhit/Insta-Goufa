@@ -19,7 +19,7 @@ function RenderDirectoryItem({merchant, onClick}){
 function MerchantDirectory(props){
     const directory = props.merchants.map(merchant => {
         return (
-            <div key={merchant.id} className="col-md-5 m-1">
+            <div key={merchant.id} className="col-md-4">
                 <RenderDirectoryItem merchant= {merchant} onClick={props.onClick} />
             </div>
         );

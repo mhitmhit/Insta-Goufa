@@ -3,7 +3,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
  function RenderMerchant({merchant}){
     if (merchant) {
         return (
-            <div key={merchant.id} className="col-md-5 m-1">
+            <div key={merchant.id} className="col-md-4">
                 <Card>
                     <CardImg width="100%" src={merchant.image} alt={merchant.name} />
                     <CardBody>
@@ -23,7 +23,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
             {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(
                 new Date(Date.parse(comment.date)))}<br /><br /></div>)); 
         return(
-            <div className="col-md-5 m-1">
+            <div className="col-md-4">
                 <h4>Comments</h4>
                 {comts1}
             </div>

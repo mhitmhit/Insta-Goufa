@@ -10,15 +10,47 @@ body {
 
 .card-img-overlay .card-title {
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(26, 97, 17, 0.5);
+}
+
+h1, h2, h3, .card-body>.card-title {
+  font-family: "Lobster", cursive;
+}
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+.site-footer {
+  background-image: linear-gradient(#CCFF90, white);
+  padding: 20px 0;
+}
+
+.jumbotron {
+  margin: 0;
+  padding: 30px;
+  background-image: linear-gradient(to right, #64DD17, #76FF03, #F1F8E9);
+  color: white;
+}
+
+.jumbotron h2 {
+  color: #CEC8FF;
+}
+
+.navbar-dark {
+  background-color: #558B2F;
 }
 
 .card {
   border: 1px solid gray;
   border-radius: 3px;
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   position: relative;
-  box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+  box-shadow: 2px 2px 2px rgba(5, 78, 11, 0.3);
+  margin-top: 15px;
+  margin-bottom:15px;
 }
 
