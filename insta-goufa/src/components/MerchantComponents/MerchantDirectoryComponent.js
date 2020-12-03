@@ -4,9 +4,9 @@ function RenderDirectoryItem({merchant, onClick}){
     return (
         <Card onClick = {() => onClick(merchant)}>
             <CardImg width="100%" src={merchant.image} alt={merchant.name} />
-            <CardImgOverlay>
+            {/* <CardImgOverlay>
                 <CardTitle>{merchant.name}</CardTitle>
-            </CardImgOverlay>
+            </CardImgOverlay> */}
             <CardBody>
                 <CardTitle>{merchant.name}</CardTitle>
                 <CardText>{merchant.description}</CardText>
@@ -26,8 +26,11 @@ function MerchantDirectory(props){
     })
     return (
         <div className="container">
+            <div className="row mx-auto">
+                  <h3>Browse our Partner Merchants:</h3>  
+            </div>
             <div className="row">
-                {directory}
+                    {directory}
             </div>
         </div>
     );

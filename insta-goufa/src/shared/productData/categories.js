@@ -27,6 +27,6 @@ export const CATEGORIES = [
         id: 4,
         name: 'Merchants',
         image: 'assets/images/stores.jpg',
-        description: "Our dedicated Merchants are here to serve our customers with the best products in the Market"
+        description: "Our dedicated Merchants are here to serve our customers"
     }
 ];

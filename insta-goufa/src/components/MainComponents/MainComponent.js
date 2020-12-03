@@ -4,9 +4,12 @@ import MerchantDirectory from '../MerchantComponents/MerchantDirectoryComponent'
 import MerchantInfo from '../MerchantComponents/MerchantInfoComponent';
 import Footer from './FooterComponent';
 import Header from './HeaderComponent';
+import MainBanner from './MainBannerComponent';
+import MerchantBanner from '../MerchantComponents/MerchantBannerComponent';
 import { CATEGORIES } from '../../shared/productData/categories';
 import { MERCHANTS } from '../../shared/merchantsData/merchants';
 import { MERCHANTREVIEWS } from '../../shared/merchantsData/merchantReviews';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 class Main extends Component {
     constructor(props){
@@ -34,9 +37,23 @@ class Main extends Component {
         return (
             <div>
                 <Header />
-                <Directory categories = {this.state.categories}/>
-                <MerchantDirectory merchants = {this.state.merchants} onClick={merchant => this.onMerchantSelect(merchant)}/>
-                <MerchantInfo merchant={this.state.selectedMerchant} comments={this.state.selectedMerchantComments}/>
+                <Switch>
+                    <Route exact path='/' render={()=>
+                        <div>
+                            <MainBanner />  
+                            <Directory categories = {this.state.categories}/>
+                            <MerchantDirectory merchants = {this.state.merchants} onClick={merchant => this.onMerchantSelect(merchant)}/>  
+                        </div>
+                    }/>
+                     <Route exact path='/merchants' render={()=>
+                        <div>
+                            <MerchantBanner />
+                            <MerchantDirectory merchants = {this.state.merchants} onClick={merchant => this.onMerchantSelect(merchant)}/>  
+                            <MerchantInfo merchant={this.state.selectedMerchant} comments={this.state.selectedMerchantComments}/>
+                        </div>
+                    }/>
+                    <Redirect to='/' />
+                </Switch>
                 <Footer />
             </div>
         );

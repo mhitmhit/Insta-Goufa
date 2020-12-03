@@ -8,13 +8,13 @@ function Footer(props) {
                     <div className="col-4 col-sm-2 offset-1">
                         <h5>Links</h5>
                         <ul className="list-unstyled">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Directory</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a  href="#">Home</a></li>
+                            <li><a  href="#">Directory</a></li>
+                            <li><a  href="#">About</a></li>
+                            <li><a  href="#">Contact</a></li>
                         </ul>
                     </div>
-                    <div className="col-6 col-sm-3 text-center">
+                    <div className="col-6 col-sm-3">
                         <h5>Social</h5>
                         <a className="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i className="fa fa-instagram" /></a>{' '}
                         <a className="btn btn-social-icon btn-facebook" href="http://www.facebook.com/"><i className="fa fa-facebook" /></a>{' '}
@@ -22,8 +22,8 @@ function Footer(props) {
                         <a className="btn btn-social-icon btn-google" href="http://youtube.com/"><i className="fa fa-youtube" /></a> 
                     </div>
                     <div className="col-sm-4 text-center">
-                        <a role="button" className="btn btn-link" href="tel:+12065551234"><i className="fa fa-phone" /> 1-718-374-2465</a><br />
-                        <a role="button" className="btn btn-link" href="mailto:notreal@notreal.co"><i className="fa fa-envelope-o" /> ye@njit.edu </a>
+                        <a role="button" className="btn" href="tel:+12065551234"><i className="fa fa-phone" /> 1-718-374-2465</a><br />
+                        <a role="button" className="btn" href="mailto:notreal@notreal.co"><i className="fa fa-envelope-o" /> ye@njit.edu </a>
                     </div>
                 </div>
             </div>

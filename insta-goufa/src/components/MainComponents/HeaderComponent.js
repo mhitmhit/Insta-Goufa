@@ -1,11 +1,27 @@
 import React, { Component }  from 'react';
-import { Navbar, NavbarBrand, Jumbotron } from 'reactstrap';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+
+        this.toggleNav = this.toggleNav.bind(this);
+        this.state = {
+          isNavOpen: false
+        };
+    }
+
+    toggleNav() {
+        this.setState({
+            isNavOpen: !this.state.isNavOpen
+        });
+    }
+
     render() {
         return (
             <React.Fragment>
-                <Jumbotron fluid>
+                {/* <Jumbotron fluid>
                     <div className="container">
                         <div className="row">
                             <div className="col">
@@ -13,11 +29,26 @@ class Header extends Component {
                             </div>
                         </div>
                     </div>
-                </Jumbotron>
+                </Jumbotron> */}
 
-                <Navbar dark sticky="top">
+                <Navbar light sticky="top" expand="md">
                     <div className="container">
-                        <NavbarBrand href="/">Insta-Goufa</NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/InstaGoufaLogo1.png" height="90" width="100" alt="insta goufa"/> </NavbarBrand>
+                        <NavbarToggler onClick={this.toggleNav} />
+                        <Collapse isOpen={this.state.isNavOpen} navbar>
+                            <Nav navbar className="ml-auto">
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/">
+                                        <i className="fa fa-home fa-lg" />
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/">
+                                        <i className="fa fa-cart-plus fa-lg" />
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </Collapse>
                     </div>
                 </Navbar>
             </React.Fragment>
