@@ -52,7 +52,7 @@ class Main extends Component {
                             <MerchantInfo merchant={this.state.selectedMerchant} comments={this.state.selectedMerchantComments}/>
                         </div>
                     }/>
-                    {/* <Redirect to='/' /> */}
+                    <Redirect to='/' />
                 </Switch>
                 <Footer />
             </div>
